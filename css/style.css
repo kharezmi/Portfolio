@@ -1,0 +1,586 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda+One&family=Montserrat:wght@400;700&family=Raleway&family=Red+Rose&family=Varela+Round&display=swap");
+
+* {
+  outline: none;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-image: url("../images/chrissa-giannakoudi-ZxCAQcWEn60-unsplash\ \(1\).jpg") !important;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  font-family: "Varela Round", sans-serif;
+  margin: 0;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #111111;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #505050;
+  border-radius: 5px;
+}
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#logo {
+  color: white;
+  font-size: 60px;
+  margin-left: 40px;
+  margin-top: 22px;
+  opacity: 0.99999;
+  display: inline-block;
+}
+
+#logo a {
+  text-decoration: none;
+  color: white;
+  font-family: "Red Rose", cursive;
+}
+
+#logo a span {
+  color: #dfa937;
+}
+
+nav {
+  height: 100%;
+  width: 55px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav .navbar {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 76px;
+  margin-bottom: 00px;
+}
+
+.navbar li {
+  transform: rotateZ(270deg);
+  margin-bottom: 70px;
+  margin-left: -40px;
+}
+
+.navbar .projects-link {
+  margin-top: 30px;
+}
+
+.navbar .contact-link {
+  margin-top: 25px;
+  margin-bottom: 65px;
+}
+
+.navbar li a {
+  color: white;
+  text-decoration: none;
+  font-family: "Varela Round", sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 16px;
+  transition: 0.3s linear;
+  border-top: 2px solid rgba(255, 255, 255, 0);
+}
+
+.navbar li a:hover {
+  border-color: white;
+}
+
+.navbar-active-class {
+  border-color: white !important;
+}
+
+#hidden-navbar {
+  display: none;
+}
+
+#hidden-navbar svg {
+  cursor: pointer;
+  height: 100px;
+  width: 100px;
+  margin-top: 0px;
+  position: absolute;
+  z-index: 20;
+  right: 4%;
+  top: 8px;
+  outline: none !important;
+}
+
+#hidden-navbar svg path {
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke: white;
+  fill: none;
+  transition: all 0.5s ease-in-out;
+}
+
+#hidden-navbar .svg_path__color {
+  stroke: white !important;
+}
+
+/* In menu form */
+
+#hidden-navbar .top_bar,
+#hidden-navbar .bottom_bar {
+  stroke-dasharray: 240px 910px;
+}
+
+#hidden-navbar .middle_bar {
+  stroke-dasharray: 240px 240px;
+}
+
+/* In cross form */
+
+#hidden-navbar .open .top_bar,
+#hidden-navbar .open .bottom_bar {
+  stroke-dashoffset: -650px;
+}
+
+#hidden-navbar .open .middle_bar {
+  stroke-dasharray: 0px 220px;
+  stroke-dashoffset: -120px;
+}
+
+/* open close btn end */
+
+.links {
+  margin-top: auto;
+  margin-bottom: 50px;
+}
+
+.links div {
+  text-align: right;
+  padding-right: 18px;
+  margin-top: 10px;
+}
+
+.links div a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+#name {
+  font-size: 55px;
+  font-family: "Varela round", sans-serif;
+  text-align: center;
+  letter-spacing: 3px;
+  margin-top: 110px;
+  margin-bottom: 0;
+  animation: transform-name 1s;
+  transition-delay: 0.4s;
+}
+
+@keyframes transform-name {
+  0% {
+    transform: translateY(100px);
+    animation-timing-function: ease-in-out;
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    animation-timing-function: ease-in-out;
+    opacity: 1;
+  }
+}
+
+.name2 {
+  margin-top: 0 !important;
+}
+
+#typing {
+  margin-top: 5px;
+  font-size: 30px;
+  text-align: center;
+  color: #ffc83d;
+  animation: transform-name 1s;
+  display: none;
+}
+
+#typing span {
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite; /* Never stop waving :) */
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+#typing::after {
+  content: "|";
+  display: inline;
+  -webkit-animation: blink 1s infinite;
+  -moz-animation: blink 1s infinite;
+  animation: blink 1s infinite;
+}
+
+/*Removes cursor that comes with typed.js*/
+.typed-cursor {
+  opacity: 0;
+  display: none;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* links 
+
+https://prashantsani.com/
+http://www.pascalvangemert.nl/#/profile
+
+*/
+
+@media (max-width: 1365.98px) {
+  body {
+    height: 100vh;
+    min-height: 650px;
+    overflow-y: scroll;
+    background-position: center;
+  }
+
+  nav {
+    height: 100vh;
+    min-height: 650px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  #name {
+    font-size: 45px;
+  }
+
+  #typing {
+    margin-top: 5px;
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 992px) {
+  .for-logo {
+    color: white;
+    font-size: 50px !important;
+    margin-left: 81px !important;
+    margin-top: 30px !important;
+    opacity: 1 !important;
+    display: unset !important;
+    position: absolute;
+    z-index: 25;
+    top: 0;
+    left: 0;
+    transition: 0.4s ease;
+  }
+
+  .navbar-layout-style {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 12;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  nav {
+    height: 100vh;
+    min-height: 450px;
+    width: 250px;
+    position: absolute;
+    right: unset;
+    left: 0;
+    top: 0;
+    z-index: 14;
+    background-color: #000000;
+    border-left: none;
+    margin-left: -500px;
+    transition: 0.5s cubic-bezier(0.51, 0.92, 0.6, 1);
+  }
+
+  .navbar-active {
+    margin-left: 0;
+  }
+
+  nav::before {
+    content: "";
+    height: 1px;
+    width: 40%;
+    left: 30%;
+    position: absolute;
+    z-index: 33;
+    background-color: white;
+    opacity: 0.3;
+    top: 110px;
+  }
+
+  nav .navbar {
+    padding: 0;
+    margin-bottom: 0px;
+    margin-top: 140px;
+  }
+
+  .navbar li,
+  .navbar .projects-link,
+  .navbar .contact-link {
+    transform: rotateZ(0deg);
+    margin: 0;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .navbar li a {
+    padding: 0px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    transition: 0.25s ease;
+    border-top: none;
+    display: block;
+  }
+
+  .navbar li a:hover,
+  .navbar-active-class {
+    color: #ffc83d !important;
+  }
+
+  #hidden-navbar {
+    display: block;
+  }
+
+  #hidden-navbar svg {
+    cursor: pointer;
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    z-index: 20;
+    right: 12px;
+    top: 10px;
+    outline: none !important;
+    transition: 1s;
+  }
+
+  #hidden-navbar svg path {
+    stroke-width: 15;
+    stroke-linecap: round;
+    stroke: white;
+    fill: none;
+    transition: all 0.5s ease-in-out;
+  }
+
+  #hidden-navbar .svg_path__color {
+    stroke: white !important;
+  }
+
+  /* open close btn end */
+
+  .links {
+    margin-top: auto;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .links div {
+    text-align: right;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-top: 10px;
+    transition: 1s ease;
+  }
+
+  .links div a {
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+  }
+
+  #name {
+    font-size: 40px;
+  }
+
+  #typing {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #logo {
+    font-size: 50px;
+  }
+
+  #hidden-navbar svg {
+    height: 80px;
+    width: 80px;
+  }
+
+  #name {
+    font-size: 35px;
+  }
+
+  #typing {
+    font-size: 20px;
+  }
+
+  .for-logo {
+    font-size: 45px !important;
+    margin-left: 88px !important;
+  }
+
+  nav::before {
+    top: 105px;
+  }
+
+  nav .navbar {
+    margin-top: 130px;
+  }
+
+  .navbar li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font: 17px;
+  }
+
+  .links div a {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #name {
+    font-size: 30px;
+  }
+
+  #typing {
+    font-size: 20px;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 440px) {
+  body {
+    min-height: 400px;
+    overflow-x: hidden;
+  }
+
+  nav {
+    min-height: 400px;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  nav::before {
+    content: unset;
+  }
+
+  nav .navbar {
+    margin-top: 120px;
+  }
+
+  #logo {
+    font-size: 40px !important;
+    margin-top: 15px;
+    margin-left: 35px;
+  }
+
+  #hidden-navbar svg {
+    height: 65px;
+    width: 65px;
+    top: 5px;
+  }
+
+  .for-logo {
+    margin-left: 30px !important;
+    width: 100% !important;
+    display: block !important;
+    margin-top: 15px !important;
+    font-size: 40px;
+  }
+
+  #name {
+    margin-top: 130px;
+    font-size: 25px;
+  }
+
+  #typing {
+    font-size: 18px;
+  }
+}
